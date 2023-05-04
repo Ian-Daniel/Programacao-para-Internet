@@ -8,13 +8,12 @@
 </head>
 <body>
     <script>
-        var resultado;
-        var i = 1
-        var n1 = parseInt(prompt("Digite um número de 1 a 10."))
-        for (i; i <= 10; i++){
-            resultado = n1 * i
-            document.write(`${n1} X ${i} = ${resultado} <br>`)
+        var n1 = parseInt(prompt("Digite um número inteiro."))
+        var i = n1 - 1
+        for (i; i > 0; i--){
+            n1 = n1 * i
         }
+        document.write(n1)
     </script>
 </body>
 </html>

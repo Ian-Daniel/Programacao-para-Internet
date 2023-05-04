@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" id="myform">
+        <label for="serie">Selecione seu ano escolar:
+            <br>
+            <input type="radio" name="serie" value="1" id="ano">1º ano
+            <br>
+            <input type="radio" name="serie" value="2" id="ano">2º ano
+            <br>
+            <input type="radio" name="serie" value="3" id="ano">3º ano
+            <br>
+            <input type="radio" name="serie" value="4" id="ano">4º ano
+            <br>
+        </label>
+        <button type="submit" id="submitbtn"></button>
+    </form>
+    <script>
+        var btn = document.querySelector("#submitbtn")
+        btn.addEventListener("click", function(event){
+            event.preventDefault()
+            var ano = document.querySelector("input[name='serie']:checked").value
+            console.table([ano])
+            if (ano == "1"){
+                document.write("Você é novato!")
+            }
+            else if (ano == "2" || ano == "3"){
+                document.write("Você está no caminho!")
+            }
+            else{
+                document.write("Você é concluinte!")
+            }
+        })
+    </script>
+</body>
+</html>
