@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="menu"> Home - Fotos - Curiosidades - Contatos</div>
-    <div id="curiosidades">
+    <div id="curiosidades" onmouseover="Passar()">
         <h1>Curiosidades - Info4M/2023 </h1>
         <ul class="colorido">
             <li>É uma turma pequena. </li>
@@ -21,12 +21,9 @@
         </ul>
     </div>
     <script>
-        document.addEventListener('mouseover', Mudar)
-        function Mudar(){
-            var lista = document.querySelectorAll('li')
-            for(var elemento of lista){
-                elemento.style.backgroundColor = 'yellow'
-            }
+        function Passar(){
+            var a = window.document.getElementsByClassName('colorido')[0]
+            a.style.background = 'yellow'
         }
     </script>
 </body>
