@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var valores = [94, 38, 45, 12, 78]
+        valores.push(7, 3)
+        valores[0] = 99
+        valores[2] = 57
+        var maior = valores[0]
+        var menor = valores[0]
+        for (var i = 1; i < valores.length; i++) {
+            if (valores[i] > maior) {
+                maior = valores[i]
+            }
+            if (valores[i] < menor) {
+                menor = valores[i]
+            }
+        }
+        document.write(maior)
+        document.write('<br>');
+        document.write(menor)
+    </script>
+</body>
+</html>

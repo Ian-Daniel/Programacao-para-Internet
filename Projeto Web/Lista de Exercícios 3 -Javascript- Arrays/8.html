@@ -10,7 +10,16 @@
     <script>
         var valores = [94, 38, 45, 12, 78]
         valores.push(7, 3)
+        valores[0] = 99
+        valores[2] = 57
+        var soma = 0
+        for (var i = 0; i < valores.length; i++) {
+            soma += valores[i]
+        }
+        var média = soma / valores.length
         document.write(valores.join(', '))
+        document.write('<br>')
+        document.write(média)
     </script>
 </body>
 </html>

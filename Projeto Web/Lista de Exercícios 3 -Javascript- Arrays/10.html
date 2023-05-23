@@ -10,7 +10,15 @@
     <script>
         var valores = [94, 38, 45, 12, 78]
         valores.push(7, 3)
+        valores[0] = 99
+        valores[2] = 57
+        var novoArray = []
+        for (var i = 0; i < valores.length; i++) {
+            novoArray.push(valores[i] * 2)
+        }
         document.write(valores.join(', '))
+        document.write('<br>')
+        document.write(novoArray.join(', '))
     </script>
 </body>
 </html>
