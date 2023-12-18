@@ -23,12 +23,10 @@ class Jogador(models.Model):
 
 class Partida(models.Model):
     id=models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='ID único para partida dentro do histórico de partidas.')
-    jogador=models.ForeignKey('Jogador', on_delete=models.SET_NULL, null=True)
-    adversario = models.CharField(max_length=200)
-    dataHora = models.DateField(null=True, blank=True)
-
-    def __str__(self):
-        return f'{self.id} ({self.jogador.nome})'
+    local=models.CharField(max_length=200, default='IFRN - campus Natal-Central', help_text='Local da partida.')
+    adversario=models.CharField(max_length=200, help_text='Insira o nome do time adversário.')
+    dataHora=models.DateField(null=True, blank=True)
+    placar=models.CharField(max_length=200, blank=True, help_text='Insira o placar da partida.')
 
 class Treinador(models.Model):
     nome=models.CharField(max_length=200, help_text='Insira o nome do treinador.')
