@@ -18,8 +18,8 @@ class Jogador(models.Model):
     def __str__(self):
         return self.nome
     
-    def get_absolute_urls(self):
-        return reverse('Detalhes do jogador', args=[str(self.id)])
+    def get_absolute_url(self):
+        return reverse('jogador-detail', args=[str(self.id)])
 
 class Partida(models.Model):
     id=models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='ID único para partida dentro do histórico de partidas.')
