@@ -18,6 +18,13 @@ def index(request):
 
 class JogadorListView(generic.ListView):
     model=Jogador
+    paginate_by=5
     
 class JogadorDetailView(generic.DetailView):
     model=Jogador
+    
+class TreinadorListView(generic.ListView):
+    model=Treinador   
+    
+class TreinadorDetailView(generic.DetailView):
+    model=Treinador

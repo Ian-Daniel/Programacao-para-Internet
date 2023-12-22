@@ -3,21 +3,8 @@
 {% block content %}
   <h1>Nome: {{ jogador.nome }}</h1>
 
-  <p><strong>Treinador:</strong> <a href="">{{ jogador.treinador }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Treinador:</strong> <a href="">{{ jogador.treinador }}</a></p>
   <p><strong>Posição:</strong> {% for posicao in jogador.posicao.all %} {{ posicao }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-
-  <!--<div style="margin-left:20px;margin-top:20px">
-    <h4>Descrição</h4>
-
-    {% for copy in jogador.partida_set.all %}
-      <hr>
-      <p class="{% if copy.local == 'IFRN - campus Natal-Central' %}text-success{% elif copy.local == 'IFRN - campus Natal-Central' %}text-danger{% else %}text-warning{% endif %}">{{ copy.get_local_display }}</p>
-      {% if copy.local != 'IFRN - campus Natal-Central' %}
-        <p><strong>Data da partida:</strong> {{copy.dataHora}}</p>
-      {% endif %}
-      <p><strong>Adversário:</strong> {{copy.adversario}}</p>
-      <p class="text-muted"><strong>ID da partida:</strong> {{copy.id}}</p>
-    {% endfor %}
-  </div>-->
+  <p><strong>Numero da camisa:</strong> {{ jogador.numeroDaCamisa }}</a></p> 
 
 {% endblock %}

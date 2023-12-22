@@ -6,8 +6,7 @@
   <ul>
     {% for jogador in jogador_list %}
       <li>
-        <a href="{{ jogador.get_absolute_url }}">{{ jogador.nome }}</a> ({{jogador.treinador}})
-      </li>
+        <a href="{{ jogador.get_absolute_url }}">{{ jogador.nome }}</a>
     {% endfor %}
   </ul>
   {% else %}

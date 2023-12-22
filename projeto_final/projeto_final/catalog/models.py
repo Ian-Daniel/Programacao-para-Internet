@@ -32,9 +32,11 @@ class Treinador(models.Model):
     nome=models.CharField(max_length=200, help_text='Insira o nome do treinador.')
     idade=models.CharField(max_length=200, help_text='Insira a idade do treinador.')
     email=models.CharField(max_length=200, help_text='Insira o e-mail do treinador.')
-
-    def get_absolute_url(self):
-        return reverse('Detalhes do treinador', args=[str(self.id)])
-
+    
     def __str__(self):
         return self.nome
+
+    def get_absolute_url(self):
+        return reverse('treinador-detail', args=[str(self.id)])
+
+    
