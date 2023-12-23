@@ -13,4 +13,8 @@
     <li><strong>Partidas:</strong> {{ numeroDePartidas }}</li>
     <li><strong>Posições:</strong> {{ numeroDePosicoes }}</li>
   </ul>
+  <p>
+    Você visitou esta página {{ numeroDeVisitas }}{% if numeroDeVisitas == 1 %} time{%
+    else %} times{% endif %} vezes.
+  </p>
 {% endblock %}

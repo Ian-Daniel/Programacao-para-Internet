@@ -7,11 +7,16 @@ def index(request):
     numeroDePosicoes=Posicao.objects.all().count
     numeroDePartidas=Partida.objects.all().count
     numeroDeJogadores=Jogador.objects.count()
+    numeroDeTreinadores=Treinador.objects.count()
+    numeroDeVisitas=request.session.get('numeroDeVisitas', 0)
+    request.session['numeroDeVisitas']=numeroDeVisitas + 1
     
     context={
         'numeroDePosicoes':numeroDePosicoes,
         'numeroDePartidas':numeroDePartidas,
         'numeroDeJogadores':numeroDeJogadores,
+        'numeroDeTreinadores':numeroDeTreinadores,
+        'numeroDeVisitas':numeroDeVisitas
     }
     
     return render(request,'index.html',context=context)
