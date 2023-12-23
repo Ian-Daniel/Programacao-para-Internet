@@ -9,7 +9,7 @@
   <h2>Dynamic content</h2>
   <p>O site tem as seguintes abas:</p>
   <ul>
-    <li><strong>Jogadores:</strong> {{ numeroDeJogadores }}</li>
+    <li><strong><a href="{% url 'jogadores' %}">Jogadores:</a></strong> {{ numeroDeJogadores }}</li>
     <li><strong>Partidas:</strong> {{ numeroDePartidas }}</li>
     <li><strong>Posições:</strong> {{ numeroDePosicoes }}</li>
   </ul>

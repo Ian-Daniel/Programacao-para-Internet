@@ -9,7 +9,7 @@ def index(request):
     numeroDeJogadores=Jogador.objects.count()
     numeroDeTreinadores=Treinador.objects.count()
     numeroDeVisitas=request.session.get('numeroDeVisitas', 0)
-    request.session['numeroDeVisitas']=numeroDeVisitas + 1
+    request.session['numeroDeVisitas']=numeroDeVisitas+1
     
     context={
         'numeroDePosicoes':numeroDePosicoes,
@@ -23,7 +23,7 @@ def index(request):
 
 class JogadorListView(generic.ListView):
     model=Jogador
-    paginate_by=5
+    paginate_by=6
     
 class JogadorDetailView(generic.DetailView):
     model=Jogador
