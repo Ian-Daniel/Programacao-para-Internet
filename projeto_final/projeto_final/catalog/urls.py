@@ -8,6 +8,8 @@ urlpatterns = [
     path('jogador/<int:pk>', views.JogadorDetailView.as_view(), name='jogador-detail'),
     path('treinador/', views.TreinadorListView.as_view(), name='treinador'),
     path('treinador/<int:pk>', views.TreinadorDetailView.as_view(), name='treinador-detail'),
+    path('partidas/', views.PartidaListView.as_view(), name='partidas'),
+    path('partidas/<int:pk>', views.PartidaDetailView.as_view(), name='partida-detail'),
 ]
 
 urlpatterns += [

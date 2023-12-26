@@ -28,6 +28,13 @@ class Partida(models.Model):
     dataHora=models.DateField(null=True, blank=True)
     placar=models.CharField(max_length=200, blank=True, help_text='Insira o placar da partida.')
 
+    def __str__(self):
+        return self.nome
+
+    def get_absolute_url(self):
+        return reverse('partida-detail', args=[str(self.id)])
+
+
 class Treinador(models.Model):
     nome=models.CharField(max_length=200, help_text='Insira o nome do treinador.')
     idade=models.CharField(max_length=200, help_text='Insira a idade do treinador.')

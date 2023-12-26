@@ -15,7 +15,7 @@ def index(request):
     numeroDeVisitas=request.session.get('numeroDeVisitas', 0)
     request.session['numeroDeVisitas']=numeroDeVisitas+1
     
-    context={
+    context={       
         'numeroDePosicoes':numeroDePosicoes,
         'numeroDePartidas':numeroDePartidas,
         'numeroDeJogadores':numeroDeJogadores,
@@ -37,6 +37,12 @@ class TreinadorListView(generic.ListView):
     
 class TreinadorDetailView(generic.DetailView):
     model=Treinador
+
+class PartidaListView(generic.ListView):
+    model=Partida
+
+class PartidaDetailView(generic.DetailView):
+    model=Partida
 
 class TreinadorCreate(CreateView):
     model = Treinador
